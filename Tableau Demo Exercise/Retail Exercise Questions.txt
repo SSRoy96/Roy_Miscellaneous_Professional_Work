@@ -1,0 +1,195 @@
+********************************************** EXERCISE FILE **************************************************************
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Module 2: Analysis and Visualisation Basics 
+The data scientist has to be comfortable in data extraction, transformation and loading. 
+Then visualisations help the data scientist solve many important problems. 
+There are numerous examples where the problems are solved with the right statistics and visualisations even before applying any specialised data science algorithm. 
+To familiarise with data analysis and visualisation basics, we study numpy, pandas, seaborn, plotly and folium OpenStreetMap in this section.
+
+## Branch
+ Make sure you know your branch of this module.  
+ We continue to improve the modules based on your feedbacks and submitted outputs. 
+ Therefore, we create a branch for you when we assign the module.  
+ Go through the `README.md` of your branch.
+ 
+ ARE YOU READING THE RIGHT BRANCH?
+ 
+ If there is any doubt contact DataDisca.
+
+This code is hosted in a private repository to regulate access.
+After completing the module, you can host the end product in an open repository under MIT license. 
+
+## Study
+
+1. Study numpy using a tutorial found on the internet.
+    1. What is the link to the tutorial/ what is the name of the book? You can list up to 3. The most useful for you should come first.
+    1. Find a cheat sheet and write the link below.
+    1. Master the following
+        1. array
+        1. zeros
+        1. arange
+        1. linspace
+        1. eye
+        1. empty
+        1. reshape
+        1. resize
+        1. append
+        1. insert
+        1. concatenate   
+   
+1. Study pandas using a tutorial found on the internet.  
+    1. What is the link to the tutorial/ what is the name of the book? You can list up to 3. The most useful for you should come first.  
+    1. What are the most useful features you learnt?
+    1. Find a cheat sheet and write the link below.
+    1. Master the following
+        1. Read data frames from 
+            1. csv
+            1. Excel 
+            1. json
+            1. sql (use SQLite)
+        1. Write data frames to 
+            1. csv
+            1. Excel 
+            1. json
+            1. sql (use SQLite)    
+        1. Create a data frame from numpy arrays
+        1. Create a data frame from dictionaries
+        1. Append rows
+        1. Delete rows
+        1. Data read/write with 
+            1. iloc 
+            1. loc 
+        1. Data subsetting
+        1. Data sampling 
+        1. Rename columns 
+        1. Add and delete columns
+        1. Change column data types
+        1. Sort by columns
+        1. Sort by index
+        1. Add delete indexes
+        1. Add delete multi-level indexes
+        1. Muti indexes: add, remove
+        1. Multi-level column names, add, remove, rename
+        1. map, apply, applymap and lambda functions
+        1. idxmin, idxmax
+        1. Pivot tables
+        1. iteritems and iterrows
+        1. groupy
+        1. replace, fillna, dropna
+        1. merge
+        1. join
+        1. concat
+        1. value_counts, unique        
+        1. pipe
+
+1. Study matplotlib using a tutorial found on the internet
+    1. What is the link to the tutorial/ what is the name of the book? You can list up to 3. The most useful for you should come first.
+    1. What are the most useful features you learnt?
+    1. Find a cheat sheet and write the link below.
+    1. Master the following
+        1. Bar charts
+        1. Line and scatter plots
+        1. Pie charts
+
+1. Study Plotly using a tutorial found on the internet
+    1. What is the link to the tutorial/ what is the name of the book? You can list up to 3. The most useful for you should come first. 
+    1. What are the most useful features you learnt?
+    1. Find a cheat sheet and write the link below.
+    1. Master the following interactive HTML plots
+        1. Line and scatter plots
+        1. Single y-axis
+        1. Multiple y-axes
+        1. n x m plots per page
+        1. Bar Charts 
+        1. Scatter Matrix
+
+1.  Study folium using a tutorial found on the internet
+    1. What is the link to the tutorial/ what is the name of the book? You can list up to 3. The most useful for you should come first.
+    1. What are the most useful features you learnt?
+    1. Find a cheat sheet and write the link below.
+
+
+## Application
+
+This is about exploratory data analysis of [product_a.csv](./product_a.csv). 
+This is the only dataset this customer has agreed to expose.
+The customer would not provide more information until we produce some insights.
+
+``` Add headers or comments with the complete questions asked in the code or jupyter notebook so that we can locate your approach efficiently.```
+
+1. Import [product_a.csv](./product_a.csv) dataset into python pandas data frame df_product_a. The first column is the index.
+1. Convert date_w field to a suitable datetime data type.
+1. Values of the year column do not match with the values of the date_w column.  Correct the values of the year column.
+1. For the numeric columns, create df_stats with the following details from df_product_a.  
+    Columns of df_stats:   
+    ``` field_name, minimum, maximum, mean, standard deviation, variance, mode, median, 0th, 10th, 20th ... 90th, 100th percentiles, 1st, 2nd and 3rd quartiles, interquartile distance, skewness and kurtosis.```
+    1. Theory: Discuss the relationships between the fields of df_stats. For example, the 2nd quartile and the median are the same.
+    1. Discuss how the columns of df_stats are useful in data analysis. 
+    1. Analyse the data based on your discussion and explain the results. What are the notable features of the dataset?
+1. Correlation Analysis
+    1. Calculate the Pearson correlation matrix (it is a square matrix) between all the possible fields. What are the conclusions you make?
+    1. Calculate Spearman’s Rank correlation matrix (it is a square matrix) between all the possible fields. What are the conclusions you make?
+1. Draw a Plotly scatter matrix plot for df_product_a.  What are the conclusions you can make using the analysis so far?
+1. Using Plotly, draw weekly and monthly time-series graphs of the numeric fields. Discuss your results.
+1. Draw year based location and type bar charts for the total volume using Plotly. Discuss your results.
+1. Compare and contrast the prices of each type, each location and {location and type} combination. 
+    Visualise the results using suitable plots.
+1. Install `pandas_profiling` package if it is not already installed. Create and display a profile report of df_product_a with `pandas_profiling`. 
+(Note: you have to learn how to generate statistics with and without `pandas_profiling`) 
+1. Install and try `dtale` [https://pypi.org/project/dtale/](https://pypi.org/project/dtale/) package.
+1. Use [https://github.com/DataDisca/geo_coordinates](https://github.com/DataDisca/geo_coordinates)
+to retrieve longitudes and latitudes from Google, Here and ArcGIS map service providers.
+Record the following.    
+
+    | Map Service Provider | Address | Longitude | Latitude | Response Time (ms)| Success (1 = True, 0 = False) | 
+    | --- | --- | --- | --- | --- | --- |
+    
+    1. Copy your data into geo_retrieval_stat_<your_git_username>.csv.  
+    The header names should be msp, address, longitude, latitude, response_time, success.
+    Push that into your GitHub repository.
+    
+    1. Based on the statistics you retrieved, calculate the following table.
+    
+    | Map Service Provider | Mean Response Time (ms) | Standard Deviation of the Response Time (ms) | Success Percentage |
+    | --- | --- | --- | --- |
+    
+    1. Discuss the following aspects of the three map service providers.
+        1. Ease of registering
+        1. Success rate
+        1. API response time        
+              
+1.  Visualise data on a folium map.   
+    The locations should have circular markers with a colour range based on the mean values of bags_t.
+    The circle size should represent the mean price of Type A. 
+    Tooltips should show the total values of bags_t and total values of bag_t for each type.  
+    When markers are clicked, the average values of all numeric fields should be shown.
+
+    
+ 
+## Expected Quality Standard
+1. Tidy up your code. This has to be a professional-quality code. The PEP8 standard has to be met in your coding.
+1. Add headers or comments with the questions asked in the application so that we can locate your approach efficiently. 
+1. Host your code on your GitHub in a public or private repository as you prefer.   
+    - If it is a public repository, send the link for us to evaluate.
+    - If it is a private repository, share (view only) with our GitHub usernames [DataDisca](https://github.com/DataDisca) and/or [mbtl-datadisca](https://github.com/mbtl-datadisca).
+	
+	Send us a notification to start the evaluation.  
+	We evaluate your code for your technical progress. 
+
+## Sponsor
+DataDisca Pty Ltd, Melbourne, Australia
+
+[https://www.datadisca.com](https://www.datadisca.com)
+
+
+
+
+ 
+
+
+
+
+
+
+
